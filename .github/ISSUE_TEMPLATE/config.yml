@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: User guide
+    url: https://github.com/msavus/librecompass/blob/main/docs/user-guide.en.md
+    about: Setup, every feature and a troubleshooting table
+  - name: Writing plugins
+    url: https://github.com/msavus/librecompass/blob/main/docs/plugins.en.md
+    about: Add your own actions as single Python files
+  - name: Security issues
+    url: https://github.com/msavus/librecompass/security/advisories/new
+    about: Please report vulnerabilities privately, not as an issue

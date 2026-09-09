@@ -1,0 +1,48 @@
+name: Release
+
+# Auslösen mit einem Tag:  git tag v1.4.0 && git push origin v1.4.0
+# Der Tag muss zur Version in pythonpath/librecompass/__init__.py passen -
+# der Lauf bricht sonst ab, damit keine falsch benannte .oxt entsteht.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Tests
+        run: python3 tests/run_tests.py
+
+      - name: Version gegen den Tag prüfen
+        run: |
+          VERSION=$(python3 -c "import re;print(re.search(r'__version__\s*=\s*\"([^\"]+)\"',open('pythonpath/librecompass/__init__.py').read()).group(1))")
+          TAG="${GITHUB_REF_NAME#v}"
+          if [ "$VERSION" != "$TAG" ]; then
+            echo "Tag $TAG passt nicht zur Version $VERSION"
+            exit 1
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: .oxt bauen
+        run: python3 build.py
+
+      - name: Release anlegen
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/librecompass-${{ env.VERSION }}.oxt
+          generate_release_notes: true
+          body: |
+            Installation: die .oxt herunterladen, in LibreOffice unter
+            **Extras → Extension Manager → Hinzufügen** einbinden und
+            LibreOffice komplett neu starten (inkl. Schnellstarter).
+
+            Änderungen: siehe [CHANGELOG.md](https://github.com/msavus/librecompass/blob/main/CHANGELOG.md).

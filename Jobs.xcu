@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Startjob: hängt den Kontextmenü-Interceptor an alle Dokumente.
+
+  Gebunden an onFirstVisibleTask - das dokumentierte Startereignis des
+  Job-Frameworks. Die Dokumentereignisse OnViewCreated/OnLoad/OnNew sind
+  als Job-Ereignisse nicht belegt; neue Dokumente werden stattdessen über
+  einen Listener am GlobalEventBroadcaster erfasst (registration.py).
+
+  Ohne Kontextmenü bauen: siehe build.py, Option no-context-menu.
+-->
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry"
+                    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    oor:name="Jobs" oor:package="org.openoffice.Office">
+  <node oor:name="Jobs">
+    <node oor:name="LibreCompassContextMenu" oor:op="replace">
+      <prop oor:name="Service" oor:type="xs:string">
+        <value>org.librecompass.ContextMenuJob</value>
+      </prop>
+    </node>
+  </node>
+  <node oor:name="Events">
+    <node oor:name="onFirstVisibleTask" oor:op="fuse">
+      <node oor:name="JobList">
+        <node oor:name="LibreCompassContextMenu" oor:op="replace"/>
+      </node>
+    </node>
+  </node>
+</oor:component-data>

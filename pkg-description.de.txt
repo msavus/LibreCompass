@@ -1,0 +1,6 @@
+Lokale generative KI fuer LibreOffice - alle Module - ueber einen
+OpenAI-kompatiblen lokalen Endpoint (Ollama, llama.cpp/llama-server,
+LM Studio, vLLM). Auswahl verbessern, umschreiben, zusammenfassen und
+uebersetzen, mit dem Dokument chatten, Promptbibliothek und Verlauf.
+Keine Cloud, keine API-Keys. KI-Aenderungen koennen als nachverfolgte
+Aenderungen aufgezeichnet werden - die Kontrolle bleibt beim Nutzer.

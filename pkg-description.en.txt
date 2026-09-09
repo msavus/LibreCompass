@@ -1,0 +1,5 @@
+Local generative AI for LibreOffice - all modules - via an OpenAI-compatible
+local endpoint (Ollama, llama.cpp/llama-server, LM Studio, vLLM). Improve,
+rewrite, summarize and translate selections, chat with your document, keep a
+prompt library and history. No cloud, no API keys. AI edits can be recorded
+as tracked changes, so you stay in control of every change.

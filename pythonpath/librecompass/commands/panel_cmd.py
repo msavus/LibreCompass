@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0
+from librecompass.commands.base import Command
+from librecompass.ui import panel
+
+
+class PanelCommand(Command):
+    # Das Panel darf auch ohne offenes Writer-Dokument erscheinen;
+    # dokumentbezogene Aktionen prüfen das selbst.
+    needs_document = False
+
+    def execute(self):
+        panel.open_panel(self.ctx)

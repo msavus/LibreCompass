@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Aktualisierungsquelle. LibreOffice liest diese Datei aus dem Repository
+  (Extras > Extension Manager > Aktualisierungen suchen) und vergleicht die
+  Version mit der installierten.
+
+  Wird von scripts/bump_version.py mitgezogen; die Repository-Adresse
+  setzt scripts/set_repo.py.
+-->
+<description xmlns="http://openoffice.org/extensions/description/2006"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+  <identifier value="org.librecompass.extension"/>
+  <version value="1.5.0"/>
+  <update-download>
+    <src xlink:href="https://github.com/msavus/librecompass/releases/download/v1.5.0/librecompass-1.5.0.oxt"/>
+  </update-download>
+</description>

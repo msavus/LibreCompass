@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry"
+                    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    oor:name="Addons" oor:package="org.openoffice.Office">
+  <node oor:name="AddonUI">
+    <node oor:name="AddonMenu">
+      <node oor:name="org.librecompass.addon.m01" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?panel</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">LibreCompass-Panel</value>
+          <value>LibreCompass panel</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+      <node oor:name="org.librecompass.addon.m02" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?improve</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">Auswahl verbessern</value>
+          <value>Improve selection</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+      <node oor:name="org.librecompass.addon.m03" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?rewrite</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">Auswahl umschreiben …</value>
+          <value>Rewrite selection …</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+      <node oor:name="org.librecompass.addon.m04" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?summarize</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">Zusammenfassen</value>
+          <value>Summarize</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+      <node oor:name="org.librecompass.addon.m05" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?translate</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">Übersetzen …</value>
+          <value>Translate …</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+      <node oor:name="org.librecompass.addon.m06" oor:op="replace">
+        <prop oor:name="URL" oor:type="xs:string">
+          <value>service:org.librecompass.Main?custom</value>
+        </prop>
+        <prop oor:name="Title" oor:type="xs:string">
+          <value xml:lang="de">Eigener Prompt …</value>
+          <value>Custom prompt …</value>
+        </prop>
+        <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+      </node>
+    </node>
+    <node oor:name="OfficeMenuBar">
+      <node oor:name="org.librecompass.menu" oor:op="replace">
+        <prop oor:name="Title" oor:type="xs:string">
+          <value>LibreCompass</value>
+        </prop>
+        <node oor:name="Submenu">
+          <node oor:name="m000" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?panel</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">LibreCompass-Panel</value>
+              <value>LibreCompass panel</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m000s" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>private:separator</value>
+            </prop>
+          </node>
+          <node oor:name="m001" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?improve</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Auswahl verbessern</value>
+              <value>Improve selection</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m002" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?rewrite</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Auswahl umschreiben …</value>
+              <value>Rewrite selection …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m003" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?summarize</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Zusammenfassen</value>
+              <value>Summarize</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m004" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?translate</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Übersetzen …</value>
+              <value>Translate …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m005" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?custom</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Eigener Prompt …</value>
+              <value>Custom prompt …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>private:separator</value>
+            </prop>
+          </node>
+          <node oor:name="m006a" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?analyze</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Dokument analysieren</value>
+              <value>Analyze document</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006b" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?knowledge</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Wissensdatenbank …</value>
+              <value>Knowledge base …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006c" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?plugins</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Plug-ins …</value>
+              <value>Plugins …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006d" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>private:separator</value>
+            </prop>
+          </node>
+          <node oor:name="m006e" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?installcontextmenu</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Kontextmenü einrichten</value>
+              <value>Set up context menu</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006i" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?removecontextmenu</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Kontextmenü entfernen</value>
+              <value>Remove context menu</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006g" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?installshortcuts</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Tastenkürzel einrichten</value>
+              <value>Set up shortcuts</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006h" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?removeshortcuts</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Tastenkürzel entfernen</value>
+              <value>Remove shortcuts</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m006f" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?diagnose</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Diagnose …</value>
+              <value>Diagnostics …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+          <node oor:name="m007" oor:op="replace">
+            <prop oor:name="URL" oor:type="xs:string">
+              <value>service:org.librecompass.Main?settings</value>
+            </prop>
+            <prop oor:name="Title" oor:type="xs:string">
+              <value xml:lang="de">Einstellungen …</value>
+              <value>Settings …</value>
+            </prop>
+            <prop oor:name="Target" oor:type="xs:string"><value>_self</value></prop>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</oor:component-data>

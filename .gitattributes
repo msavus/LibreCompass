@@ -1,0 +1,5 @@
+# Zeilenenden vereinheitlichen; .oxt und Bilder sind binär.
+* text=auto eol=lf
+*.oxt binary
+*.png binary
+*.jpg binary

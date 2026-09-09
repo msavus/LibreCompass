@@ -1,0 +1,20 @@
+# Build-Ergebnisse
+dist/
+*.oxt
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+
+# Editoren und Systeme
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

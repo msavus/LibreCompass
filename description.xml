@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description xmlns="http://openoffice.org/extensions/description/2006"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Bei Umbenennung gemeinsam ändern: diese Kennung, IMPLEMENTATION_NAME
+       in registration.py und die service:-URLs in Addons.xcu. -->
+  <identifier value="org.librecompass.extension"/>
+  <version value="1.5.0"/>
+  <display-name>
+    <name lang="en">LibreCompass</name>
+    <name lang="de">LibreCompass</name>
+  </display-name>
+  <publisher>
+    <name xlink:href="https://github.com/msavus/librecompass">LibreCompass on GitHub</name>
+  </publisher>
+  <update-information>
+    <src xlink:href="https://raw.githubusercontent.com/msavus/librecompass/main/update.xml"/>
+  </update-information>
+  <extension-description>
+    <src lang="en" xlink:href="pkg-description.en.txt"/>
+    <src lang="de" xlink:href="pkg-description.de.txt"/>
+  </extension-description>
+</description>

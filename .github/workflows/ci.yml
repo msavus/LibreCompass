@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Deckt die Python-Versionen ab, die in aktuellen LibreOffice-
+        # Installationen eingebettet sind.
+        python-version: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Tests (ohne LibreOffice, UNO ist gestubbt)
+        run: python3 tests/run_tests.py
+      - name: Prüfung (XML, Syntax, Versionsgleichstand)
+        run: python3 build.py --check
+
+  package:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: .oxt bauen
+        run: python3 build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: librecompass-oxt
+          path: dist/*.oxt
+          if-no-files-found: error

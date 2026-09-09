@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest an addition or a change
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The situation, not the solution — it often suggests a simpler one.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What do you have in mind?
+    validations:
+      required: false
+  - type: checkboxes
+    id: plugin
+    attributes:
+      label: Could this be a plugin?
+      description: >
+        Own actions can be added as single Python files without changing the
+        extension — see docs/plugins.en.md.
+      options:
+        - label: I have looked at the plugin API and this does not fit it

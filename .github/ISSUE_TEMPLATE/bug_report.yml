@@ -1,0 +1,54 @@
+name: Bug report
+description: Something does not work as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. The **Diagnostics** output below is the single
+        most useful thing you can provide — it says which parts of the
+        extension actually registered in your LibreOffice.
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics output
+      description: LibreCompass → Diagnostics … then paste the whole text.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you do, what did you expect, what happened instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: LibreOffice module
+      options: [Writer, Calc, Impress, Draw, Other, Not module specific]
+    validations:
+      required: true
+  - type: input
+    id: backend
+    attributes:
+      label: Model server and model
+      description: e.g. llama.cpp (llama-server) with qwen3, or Ollama with mistral
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: e.g. Windows 11, Ubuntu 24.04, macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error messages or tracebacks
+      description: Any dialog text or console output, if there was some.
+      render: text
+    validations:
+      required: false
